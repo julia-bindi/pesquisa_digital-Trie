@@ -1,1 +1,1 @@
-# pesquisa_digital-Trie
+# Dupla: André Júnior Lopes Cardoso e Júlia Bindi Alencar de Jesus
