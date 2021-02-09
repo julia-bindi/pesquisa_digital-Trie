@@ -35,7 +35,14 @@ class Trie:
 		no_atual.fim_palavra = True
 
 	def pesquisa(self, palavra:str) -> bool:
-		return False
+		no_atual = self.raiz
+		for letra in palavra:
+			if no_atual.existe_letra(letra):
+				no_atual = no_atual.obtem_no_filho(letra)
+				pass
+			else:
+				return False
+		return True
     
 
 
