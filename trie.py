@@ -66,9 +66,11 @@ class Trie:
 				f = no_ult_letra_prefixo.obtem_no_filho(filho)
 				pref = prefixo_palavra + f.letra
 				palavras.append(self.preditor(pref))
+			print(len(palavras))
 			return palavras
 		else:	
 			palavras.append(prefixo_palavra)	
+			print(len(palavras))
 			return palavras
 
 def main():
