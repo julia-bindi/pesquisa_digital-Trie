@@ -43,8 +43,6 @@ class Trie:
 			else:
 				return False
 		return True
-    
-
 
 	def preditor(self, prefixo_palavra:str) -> List[str]:	
 		#obtem a ultima letra do prefixo
@@ -58,13 +56,13 @@ class Trie:
 		#por meio da ultima letra do prefixo, faz a predição das possiveis palavras
 		#Para isso, você poderá precisar de fazer um método recursivo
 		### SEU Código aqui
-		palavras = []
+		palavras:List[str] = []
 		if not no_ult_letra_prefixo.fim_palavra:
 			filhos = no_ult_letra_prefixo.nos_filhos()
 			for filho in filhos:
 				f = no_ult_letra_prefixo.obtem_no_filho(filho)
 				pref = prefixo_palavra + f.letra
-				palavras.append(self.preditor(pref))
+				palavras += self.preditor(pref)
 			return palavras
 		else:	
 			palavras.append(prefixo_palavra)
