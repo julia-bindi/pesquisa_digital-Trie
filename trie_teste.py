@@ -32,6 +32,8 @@ class TestNode(unittest.TestCase):
             arvore.insere(palavra)
 
         for i, palavra in enumerate(arr_palavras):
+            print(len(arvore.preditor(palavra)))
+            print(arvore.preditor(palavra))
             self.assertEqual(len(arvore.preditor(palavra)), arr_esperado[i],f"Erro ao tentar prever as palavras com o prefixo {palavra}")
 
 

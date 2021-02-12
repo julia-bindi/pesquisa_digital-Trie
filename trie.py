@@ -47,7 +47,6 @@ class Trie:
 
 
 	def preditor(self, prefixo_palavra:str) -> List[str]:	
-		print(prefixo_palavra)	
 		#obtem a ultima letra do prefixo
 		no_ult_letra_prefixo = self.raiz
 		for letra in prefixo_palavra:
@@ -66,11 +65,9 @@ class Trie:
 				f = no_ult_letra_prefixo.obtem_no_filho(filho)
 				pref = prefixo_palavra + f.letra
 				palavras.append(self.preditor(pref))
-			print(len(palavras))
 			return palavras
 		else:	
-			palavras.append(prefixo_palavra)	
-			print(len(palavras))
+			palavras.append(prefixo_palavra)
 			return palavras
 
 def main():
