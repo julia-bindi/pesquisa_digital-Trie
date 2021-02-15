@@ -39,7 +39,6 @@ class Trie:
 		for letra in palavra:
 			if no_atual.existe_letra(letra):
 				no_atual = no_atual.obtem_no_filho(letra)
-				pass
 			else:
 				return False
 		return True
